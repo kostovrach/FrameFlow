@@ -1,0 +1,106 @@
+@import "general.scss";
+
+.main {
+    &__wrapper {
+        width: 100%;
+        height: 700px;
+        margin: 100px 0;
+        overflow: hidden;
+    }
+    &__slider-wrapper {
+
+    }
+    &__slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    &__controls {
+        position: relative;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        background: radial-gradient(rgba(20, 20, 20, 0.2) 0%, rgba(20, 20, 20, 1) 90%);
+        &-descriptionBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-title {
+            width: fit-content;
+        }
+        &-description {
+            width: fit-content;
+            text-align: center;
+        }
+        &-buttonBox {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        &-button {
+            &_watch {
+                font-size: 16px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                gap: 0 0px;
+                padding: 10px 20px;
+                width: fit-content;
+            }
+            &_save,
+            &_volume {
+                cursor: pointer;
+                width: fit-content;
+                font-size: 32px;
+                padding: 10px;
+                background-color: $dark-theme-color2;
+                border: $border;
+                border-radius: $border-radius;
+                transition-duration: 0.15s;
+            }
+            &_save:active,
+            &_volume:active {
+                box-shadow: inset 0 0 5px $box-color;
+                color: $titles-color;
+            }
+        }
+        &-pagination {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0 20px 0;
+            &-arrowLeft,
+            &-arrowRight {
+                cursor: pointer;
+                font-size: 20px;
+                width: fit-content;
+                background-color: $dark-theme-color2;
+                padding: 10px;
+                border: $border;
+                border-radius: $border-radius;
+                transition-duration: 0.15s;
+            }
+            &-arrowLeft:active,
+            &-arrowRight:active {
+                box-shadow: inset 0 0 5px $box-color;
+                color: $titles-color;
+            }
+        }
+    }
+    &__video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+    }
+}
